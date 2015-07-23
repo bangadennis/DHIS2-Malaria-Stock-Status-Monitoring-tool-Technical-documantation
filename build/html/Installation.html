@@ -106,13 +106,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#step-3">Step 3</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#deployment-on-linux-and-unix-servers">Deployment on Linux and Unix servers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-on-linux-unix-servers">Deployment on Linux (Unix) servers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deploying-the-system-on-ubuntu-server">Deploying the system on Ubuntu server</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#windows-server-with-wampserver-2-5">Windows server with WAMPServer 2.5+</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installing-wamp">Installing  WAMP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deploying-the-system">Deploying the system</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="#installing-wamp">Installing  WAMP</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -172,16 +171,16 @@
 <div class="section" id="step-2">
 <h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Put the project into the webroot of the server.</li>
+<li>Put the project into the webroot of the server. For Ubuntu servers, the webroot is in <em>var/www/html</em> while in Windows server, its located in xampp(WAMP)/htdocs.</li>
 </ul>
 </div>
 <div class="section" id="step-3">
 <h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
-<p>Configure the database settings to fit the hosted application. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.</p>
+<p>Configure the database settings to fit the application that is to be deployed. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.</p>
 </div>
 </div>
-<div class="section" id="deployment-on-linux-and-unix-servers">
-<h2>Deployment on Linux and Unix servers<a class="headerlink" href="#deployment-on-linux-and-unix-servers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="deployment-on-linux-unix-servers">
+<h2>Deployment on Linux (Unix) servers<a class="headerlink" href="#deployment-on-linux-unix-servers" title="Permalink to this headline">¶</a></h2>
 <p>It is important to ensure you check the Server Requirements list before deploying on your unix server.</p>
 <p>At a high level you will need a:</p>
 <blockquote>
@@ -201,6 +200,14 @@
 <p>For Ubuntu servers, visit <a class="reference external" href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">this page for LAMP installation</a>.</p>
 <div class="section" id="deploying-the-system-on-ubuntu-server">
 <h3>Deploying the system on Ubuntu server<a class="headerlink" href="#deploying-the-system-on-ubuntu-server" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Once all of the above requirements are installed, the application folder is uploaded into the web directory.</li>
+<li>Upload the database file into the phpMyadmin of the web server.</li>
+<li>Configure the databse for use by the application.</li>
+<li>The application can now be accessed throught the browser using the IP address ar the defined url.</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="windows-server-with-wampserver-2-5">
@@ -217,14 +224,6 @@
 <li>Left-click the &#8220;W&#8221;, then select MySQL -&gt; my.ini. At the very bottom of the file, and add the following to a new line without the quotes): &#8220;lower_case_table_names = 2&#8221;. Save the file, close #. Notepad and left-click the &#8220;W&#8221;, and select &#8216;Restart all services&#8217;. This is used to ease the transition between a Windows-based install and a Linux-based install where database case-sensitivity is important.</li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="deploying-the-system">
-<h3>Deploying the system<a class="headerlink" href="#deploying-the-system" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Put the project in the webroot directory.</li>
-<li>Configure the files of the project to be able to use the existing database.</li>
-<li>Visit the homepage using the predefined url.</li>
-</ul>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>

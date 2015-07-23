@@ -12,13 +12,14 @@ step 1
 
 Step 2
 ~~~~~~~
-- Put the project into the webroot of the server.
+- Put the project into the webroot of the server. For Ubuntu servers, the webroot is in *var/www/html* while in Windows server, its located in xampp(WAMP)/htdocs.
+
 
 Step 3
 ~~~~~~~~~~
-Configure the database settings to fit the hosted application. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.
+Configure the database settings to fit the application that is to be deployed. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.
 
-Deployment on Linux and Unix servers
+Deployment on Linux (Unix) servers
 --------------------------------------
 
 It is important to ensure you check the Server Requirements list before deploying on your unix server.
@@ -41,8 +42,10 @@ For Ubuntu servers, visit `this page for LAMP installation`_.
 
 Deploying the system on Ubuntu server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+    - Once all of the above requirements are installed, the application folder is uploaded into the web directory. 
+    - Upload the database file into the phpMyadmin of the web server.
+    - Configure the databse for use by the application.
+    - The application can now be accessed throught the browser using the IP address or the defined url.
 
 
 Windows server with WAMPServer 2.5+
@@ -62,15 +65,6 @@ Installing  WAMP
 
 
 .. _`WampServer download page`: http://www.wampserver.com/en/#download-wrapper
-
-
-
-Deploying the system
-~~~~~~~~~~~~~~~~~~~~~
-- Put the project in the webroot directory.
-- Configure the files of the project to be able to use the existing database.
-- Visit the homepage using the predefined url.
-
 
 
 
