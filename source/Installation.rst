@@ -1,0 +1,78 @@
+Deployment of the system
+===========================
+
+These instructions show you how to install the malaria stock status monitoring system on any web server. Check out our operating system specific guides for Linux, Windows Server and Mac OSX.
+
+Installation Steps 
+-------------------
+step 1
+~~~~~~~~
+- Make sure the webserver has MySQL and PHP support.
+
+
+Step 2
+~~~~~~~
+- Put the project into the webroot of the server.
+
+Step 3
+~~~~~~~~~~
+Configure the database settings to fit the hosted application. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.
+
+Deployment on Linux and Unix servers
+--------------------------------------
+
+It is important to ensure you check the Server Requirements list before deploying on your unix server.
+
+At a high level you will need a:
+
+    - Web server ie Apache
+    - Database ie MySQL
+    - PHP
+
+  You should have a working LAMP (Linux + Apache  + MySQL + PHP) installation before the actual deployment of the system.
+
+  .. note::
+
+    The user has to be root when installing applications by typing *sudo su* on the terminal.
+
+For Ubuntu servers, visit `this page for LAMP installation`_.
+
+.. _`this page for LAMP installation`: http://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+
+Deploying the system on Ubuntu server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+Windows server with WAMPServer 2.5+
+------------------------------------
+Installing  WAMP
+~~~~~~~~~~~~~~~~~
+    #. Go to the `WampServer download page`_.
+    #. You will first need to download and install the suggested `Visual C plus plus Redistributable for Visual Studio 2012 Update 4`_ BEFORE installing WampServer.
+    #. Next, download the WampServer installer and the run the installer. By default, it will install to C:\wamp. You can choose your own install path if you wish; however note we will refer to the c:/wamp in the test of this tutorial.
+    #. Once WampServer has been installed and launched, you will see a small "W" in the task bar, next to the clock. If everything is working, then it will be green. If it's orange or red, then something is likely misconfigured. See the Troubleshooting section below. If you can't see the "W", then WampServer hasn't been started and you should start WampServer from the start menu.
+    #. Left-click the "W", then select Apache -> Apache Modules -> Rewrite Module. The "W" will flick to orange, and then return to green.
+    #. Left-click the "W", then select MySQL -> my.ini. At the very bottom of the file, and add the following to a new line without the quotes): "lower_case_table_names = 2". Save the file, close #. Notepad and left-click the "W", and select 'Restart all services'. This is used to ease the transition between a Windows-based install and a Linux-based install where database case-sensitivity is important.
+
+
+
+.. _`Visual C plus plus Redistributable for Visual Studio 2012 Update 4`: http://www.microsoft.com/en-us/download/details.aspx?id=30679#
+
+
+.. _`WampServer download page`: http://www.wampserver.com/en/#download-wrapper
+
+
+
+Deploying the system
+~~~~~~~~~~~~~~~~~~~~~
+- Put the project in the webroot directory.
+- Configure the files of the project to be able to use the existing database.
+- Visit the homepage using the predefined url.
+
+
+
+
+.. toctree::
+    :maxdepth: 2

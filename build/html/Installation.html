@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Deployment of the system &mdash; StockStatusMonitoring_Technical 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="StockStatusMonitoring_Technical 1.0 documentation" href="index.html"/>
+        <link rel="prev" title="Server Requirements for deployment" href="Requirements.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> StockStatusMonitoring_Technical
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Structure.html#database">Database</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Development_tools.html">Development tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#mysql-database">MYSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#javascript">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#html5-bootstrap-and-javascript-for-user-interface">HTML5, Bootstrap and JavaScript for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Requirements.html">Server Requirements for deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#web-server-software-requirements">Web server software requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#web-server-hardware-requirements">Web server hardware requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#client-side-requirements">Client side requirements</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Deployment of the system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-steps">Installation Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1">step 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2">Step 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-on-linux-and-unix-servers">Deployment on Linux and Unix servers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-the-system-on-ubuntu-server">Deploying the system on Ubuntu server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-server-with-wampserver-2-5">Windows server with WAMPServer 2.5+</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-wamp">Installing  WAMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-the-system">Deploying the system</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">StockStatusMonitoring_Technical</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Deployment of the system</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Installation.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="deployment-of-the-system">
+<h1>Deployment of the system<a class="headerlink" href="#deployment-of-the-system" title="Permalink to this headline">¶</a></h1>
+<p>These instructions show you how to install the malaria stock status monitoring system on any web server. Check out our operating system specific guides for Linux, Windows Server and Mac OSX.</p>
+<div class="section" id="installation-steps">
+<h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1">
+<h3>step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Make sure the webserver has MySQL and PHP support.</li>
+</ul>
+</div>
+<div class="section" id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Put the project into the webroot of the server.</li>
+</ul>
+</div>
+<div class="section" id="step-3">
+<h3>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h3>
+<p>Configure the database settings to fit the hosted application. Visit the domain or IP address in your web browser. After a couple of minutes, the web application will be set up.</p>
+</div>
+</div>
+<div class="section" id="deployment-on-linux-and-unix-servers">
+<h2>Deployment on Linux and Unix servers<a class="headerlink" href="#deployment-on-linux-and-unix-servers" title="Permalink to this headline">¶</a></h2>
+<p>It is important to ensure you check the Server Requirements list before deploying on your unix server.</p>
+<p>At a high level you will need a:</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>Web server ie Apache</li>
+<li>Database ie MySQL</li>
+<li>PHP</li>
+</ul>
+</div></blockquote>
+<p>You should have a working LAMP (Linux + Apache  + MySQL + PHP) installation before the actual deployment of the system.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The user has to be root when installing applications by typing <em>sudo su</em> on the terminal.</p>
+</div>
+</div></blockquote>
+<p>For Ubuntu servers, visit <a class="reference external" href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">this page for LAMP installation</a>.</p>
+<div class="section" id="deploying-the-system-on-ubuntu-server">
+<h3>Deploying the system on Ubuntu server<a class="headerlink" href="#deploying-the-system-on-ubuntu-server" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="windows-server-with-wampserver-2-5">
+<h2>Windows server with WAMPServer 2.5+<a class="headerlink" href="#windows-server-with-wampserver-2-5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-wamp">
+<h3>Installing  WAMP<a class="headerlink" href="#installing-wamp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Go to the <a class="reference external" href="http://www.wampserver.com/en/#download-wrapper">WampServer download page</a>.</li>
+<li>You will first need to download and install the suggested <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=30679#">Visual C plus plus Redistributable for Visual Studio 2012 Update 4</a> BEFORE installing WampServer.</li>
+<li>Next, download the WampServer installer and the run the installer. By default, it will install to C:wamp. You can choose your own install path if you wish; however note we will refer to the c:/wamp in the test of this tutorial.</li>
+<li>Once WampServer has been installed and launched, you will see a small &#8220;W&#8221; in the task bar, next to the clock. If everything is working, then it will be green. If it&#8217;s orange or red, then something is likely misconfigured. See the Troubleshooting section below. If you can&#8217;t see the &#8220;W&#8221;, then WampServer hasn&#8217;t been started and you should start WampServer from the start menu.</li>
+<li>Left-click the &#8220;W&#8221;, then select Apache -&gt; Apache Modules -&gt; Rewrite Module. The &#8220;W&#8221; will flick to orange, and then return to green.</li>
+<li>Left-click the &#8220;W&#8221;, then select MySQL -&gt; my.ini. At the very bottom of the file, and add the following to a new line without the quotes): &#8220;lower_case_table_names = 2&#8221;. Save the file, close #. Notepad and left-click the &#8220;W&#8221;, and select &#8216;Restart all services&#8217;. This is used to ease the transition between a Windows-based install and a Linux-based install where database case-sensitivity is important.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="deploying-the-system">
+<h3>Deploying the system<a class="headerlink" href="#deploying-the-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Put the project in the webroot directory.</li>
+<li>Configure the files of the project to be able to use the existing database.</li>
+<li>Visit the homepage using the predefined url.</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Requirements.html" class="btn btn-neutral" title="Server Requirements for deployment" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, SCI-ezzy.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
