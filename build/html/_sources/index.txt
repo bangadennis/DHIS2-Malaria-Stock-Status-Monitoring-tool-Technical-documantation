@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Stock status monitoring project technical documentation
+Stock status monitoring project technical documentation
 ===================================================================
 
 This documentation should provide an overview of the entire stock status monitoring tool and a description of the scope of the system and its intended usage. The scope should also describe external interfaces to the system, external dependencies and provide a brief overview of the ‘characteristics’ of the system, commenting on aspects such as deployment of the system, requirements of the system for it to run etc...
