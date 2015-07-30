@@ -1,5 +1,6 @@
-Server Requirements for deployment
-===================================
+
+Software Environment Tools and Components
+============================================
 
 The Malaria Stock Status Management system needs to be installed on a web server.
 

@@ -1,0 +1,1575 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Database Schema &mdash; StockStatusMonitoring_Technical 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="StockStatusMonitoring_Technical 1.0 documentation" href="index.html"/>
+        <link rel="next" title="MOS Maps" href="SourceMaps.html"/>
+        <link rel="prev" title="Development tools" href="Development_tools.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> StockStatusMonitoring_Technical
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Requirements.html">Software Environment Tools and Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#web-server-software-requirements">Web server software requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#web-server-hardware-requirements">Web server hardware requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Requirements.html#client-side-requirements">Client side requirements</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Deployment of the system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html#installation-steps">Installation Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Installation.html#step-1">step 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation.html#step-2">Step 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Installation.html#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html#deployment-on-linux-unix-servers">Deployment on Linux (Unix) servers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Installation.html#deploying-the-system-on-ubuntu-server">Deploying the system on Ubuntu server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html#windows-server-with-wampserver-2-5">Windows server with WAMPServer 2.5+</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Installation.html#installing-wamp">Installing  WAMP</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Setup.html">Project structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Setup.html#assets">Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Setup.html#client">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Setup.html#database">Database</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Development_tools.html">Development tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#mysql-database">MYSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#javascript">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#html5-bootstrap-and-javascript-for-user-interface">HTML5, Bootstrap and JavaScript for user interface</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">The Database Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-tables">List of Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables-attributes-and-design">Tables attributes and design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-table">User_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#county-level-soh">County_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commodity-forecast-data">Commodity_forecast_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#current-stock">Current_stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pending-shipment-details">Pending_shipment_details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#central-level-data">Central_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-level-data">Facility_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#county-level-reporting-rates">County_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zones">Zones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supply-chain-agencies">Supply_chain_agencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#county-level-data">County_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-drugs-category">Mapping_drugs_category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-level-reporting-rates">Facility_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funding-agenciebles">Funding_agenciebles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facility-level-soh">Facility_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#malaria-commodities">Malaria_commodities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#planned-procurement-details">Planned_procurement_details</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a></li>
+</ul>
+<ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">StockStatusMonitoring_Technical</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>The Database Schema</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/DatabaseSchema.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="the-database-schema">
+<h1>The Database Schema<a class="headerlink" href="#the-database-schema" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This documentation set describes the data characteristics of the tables and columns in the malaria stock status monitoring  database: including datatypes and sizes, nullability, index, sequence, key and constraint information. Additional commentary is also provided for key tables and columns.</p>
+<p>Here is the screenshot of the database schema:</p>
+<blockquote>
+<div><div class="figure">
+<img alt="_images/DatabaseSchema.png" src="_images/DatabaseSchema.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="list-of-tables">
+<h2>List of Tables<a class="headerlink" href="#list-of-tables" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li>User_table</li>
+<li>County_level_soh</li>
+<li>Commodity_forecast_data</li>
+<li>Current_stock</li>
+<li>Pending_shipment_details</li>
+<li>Counties</li>
+<li>Central_level_data</li>
+<li>Facility_level_data</li>
+<li>County_level_reporting_rates</li>
+<li>Zones</li>
+<li>Supply_chain_agencies</li>
+<li>County_level_data</li>
+<li>Mapping_drugs_category</li>
+<li>Facility _level_reporting_rates</li>
+<li>Funding_agencies</li>
+<li>Facility_level_soh</li>
+<li>Malaria_commodities</li>
+<li>Planned_procurement_details</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="tables-attributes-and-design">
+<h2>Tables attributes and design<a class="headerlink" href="#tables-attributes-and-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="user-table">
+<h3>User_table<a class="headerlink" href="#user-table" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of a list of the system users&#8217; attributes with the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>user_id</li>
+<li>password</li>
+<li>names</li>
+<li>email</li>
+<li>national_id</li>
+<li>phone number</li>
+<li>role</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="9%" />
+<col width="8%" />
+<col width="14%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>user_id</td>
+<td>int(10)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>password</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>names</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>email</td>
+<td>varchar(70)</td>
+<td>NO</td>
+<td>UNI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>national_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>UNI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>phone_number</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>role</td>
+<td>int(1)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="county-level-soh">
+<h3>County_level_soh<a class="headerlink" href="#county-level-soh" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of the county level SOH attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>county</li>
+<li>report_period</li>
+<li>commodity</li>
+<li>pack_size</li>
+<li>agg_adj_consumption</li>
+<li>agg_soh</li>
+<li>mos</li>
+<li>zone</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="21%" />
+<col width="10%" />
+<col width="8%" />
+<col width="15%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>county</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>report_period</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>commodity</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>pack_size</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>agg_adj_consumption</td>
+<td>varchar(40)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>agg_soh</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>mos</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>zone</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commodity-forecast-data">
+<h3>Commodity_forecast_data<a class="headerlink" href="#commodity-forecast-data" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of the commodity forecast attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>commodity_forecast_data_id</li>
+<li>forecast_start_date</li>
+<li>forecast_period</li>
+<li>commodity_id</li>
+<li>forecast_monthly_consumption</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="16%" />
+<col width="8%" />
+<col width="6%" />
+<col width="11%" />
+<col width="20%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>commodity_forecast_data_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>forecast_start_date</td>
+<td>varchar(15)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>forecast_period</td>
+<td>int(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>commodity_id</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>forecast_monthly_consumption</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="current-stock">
+<h3>Current_stock<a class="headerlink" href="#current-stock" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of the current stock attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>current_stock_id</li>
+<li>commodity_id</li>
+<li>quantity_received</li>
+<li>quantity_issued</li>
+<li>soh</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="20%" />
+<col width="9%" />
+<col width="7%" />
+<col width="13%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>current_stock_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>commodity_id</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>quantity_received</td>
+<td>int(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>quantity_issued</td>
+<td>int(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>soh</td>
+<td>int(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pending-shipment-details">
+<h3>Pending_shipment_details<a class="headerlink" href="#pending-shipment-details" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of pending shipment attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>pending_shipment_id</li>
+<li>period</li>
+<li>commodity_id</li>
+<li>funding_agency_id</li>
+<li>quantity</li>
+<li>expected_time_of_arrival</li>
+<li>comments</li>
+<li>transaction_status</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="18%" />
+<col width="8%" />
+<col width="7%" />
+<col width="12%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>pending_shipment_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>period</td>
+<td>int(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>commodity_id</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>funding_agency_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>quantity</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>expected_time_of_arrival</td>
+<td>date</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>comments</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>transaction_status</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>pending</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="counties">
+<h3>Counties<a class="headerlink" href="#counties" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of counties attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>county_id</li>
+<li>county_name</li>
+<li>zone</li>
+<li>comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="26%" />
+<col width="11%" />
+<col width="9%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>county_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>county_name</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>zone</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>comment</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="central-level-data">
+<h3>Central_level_data<a class="headerlink" href="#central-level-data" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of central level data attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>central_level_stock_id</li>
+<li>supply_agency_id</li>
+<li>commodity_id</li>
+<li>period</li>
+<li>soh_closing_balance</li>
+<li>funding_agency_id</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="18%" />
+<col width="8%" />
+<col width="7%" />
+<col width="12%" />
+<col width="22%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>central_level_stock_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>supply_agency_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>commodity_id</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>period</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>soh_closing_balance</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>funding_agency_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="facility-level-data">
+<h3>Facility_level_data<a class="headerlink" href="#facility-level-data" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of facility level data attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>central_drugs_id</li>
+<li>drug_id</li>
+<li>period</li>
+<li>drug_category_id</li>
+<li>drug_value</li>
+<li>date</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="19%" />
+<col width="9%" />
+<col width="7%" />
+<col width="13%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>central_drugs_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>drug_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>period</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>drug_category_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>drug_value</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>date</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="county-level-reporting-rates">
+<h3>County_level_reporting_rates<a class="headerlink" href="#county-level-reporting-rates" title="Permalink to this headline">¶</a></h3>
+<p>This table consists of county level reporting rates attributes. It has the following columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li>reporting_rate_id</li>
+<li>reporting_rate_value</li>
+<li>period</li>
+<li>county_id</li>
+<li>date</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="18%" />
+<col width="8%" />
+<col width="7%" />
+<col width="13%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>reporting_rate_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>reporting_rate_value</td>
+<td>varchar(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>period</td>
+<td>varchar(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>county_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="zones">
+<h3>Zones<a class="headerlink" href="#zones" title="Permalink to this headline">¶</a></h3>
+<p>The zones table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>zone</li>
+<li>comment</li>
+<li>zone_id</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="24%" />
+<col width="10%" />
+<col width="8%" />
+<col width="15%" />
+<col width="27%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>zone</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>comment</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>zone_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="supply-chain-agencies">
+<h3>Supply_chain_agencies<a class="headerlink" href="#supply-chain-agencies" title="Permalink to this headline">¶</a></h3>
+<p>The Supply chain agencies table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>supply_chain_agency_id</li>
+<li>supply_chain_agency</li>
+<li>contact_person</li>
+<li>email</li>
+<li>contact_phone</li>
+<li>comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="20%" />
+<col width="8%" />
+<col width="7%" />
+<col width="12%" />
+<col width="21%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>supply_chain_agency_id</td>
+<td>int(5)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>supply_chain_agency</td>
+<td>varchar(60)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>contact_person</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>email</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>contact_phone</td>
+<td>int(55)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>comment</td>
+<td>varchar(1000)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="county-level-data">
+<h3>County_level_data<a class="headerlink" href="#county-level-data" title="Permalink to this headline">¶</a></h3>
+<p>The county level data table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>county_drugs_id</li>
+<li>county_id</li>
+<li>drug_id</li>
+<li>period</li>
+<li>drug_category_id</li>
+<li>drug_value</li>
+<li>date</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="19%" />
+<col width="9%" />
+<col width="7%" />
+<col width="13%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>county_drugs_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>county_id</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>drug_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>period</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>drug_category_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>drug_value</td>
+<td>varchar(15)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mapping-drugs-category">
+<h3>Mapping_drugs_category<a class="headerlink" href="#mapping-drugs-category" title="Permalink to this headline">¶</a></h3>
+<p>The Mapping drugs category table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>mapping_drugs_category</li>
+<li>mapping_id</li>
+<li>mapping_name</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="18%" />
+<col width="8%" />
+<col width="7%" />
+<col width="12%" />
+<col width="22%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>mapping_drugs_category</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>mapping_id</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>mapping_name</td>
+<td>varchar(50)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="facility-level-reporting-rates">
+<h3>Facility_level_reporting_rates<a class="headerlink" href="#facility-level-reporting-rates" title="Permalink to this headline">¶</a></h3>
+<p>The Facility level reporting  rates table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>reporting_rate_id</li>
+<li>reporting_rate_value</li>
+<li>period</li>
+<li>date</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="18%" />
+<col width="8%" />
+<col width="7%" />
+<col width="13%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>reporting_rate_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>reporting_rate_value</td>
+<td>varchar(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>period</td>
+<td>varchar(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>date</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="funding-agenciebles">
+<h3>Funding_agenciebles<a class="headerlink" href="#funding-agenciebles" title="Permalink to this headline">¶</a></h3>
+<p>The funding agencies table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>funding_agency_id</li>
+<li>funding_agency_name</li>
+<li>comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="20%" />
+<col width="8%" />
+<col width="7%" />
+<col width="13%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>funding_agency_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>funding_agency_name</td>
+<td>varchar(60)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>comment</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="facility-level-soh">
+<h3>Facility_level_soh<a class="headerlink" href="#facility-level-soh" title="Permalink to this headline">¶</a></h3>
+<p>The facility level SOH table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Field</li>
+<li>period</li>
+<li>commodity_name</li>
+<li>pack_size</li>
+<li>agg_adj_consumption</li>
+<li>agg_soh</li>
+<li>mos</li>
+<li>zone</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="21%" />
+<col width="10%" />
+<col width="8%" />
+<col width="15%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>period</td>
+<td>varchar(10)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>commodity_name</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>pack_size</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>agg_adj_consumption</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>agg_soh</td>
+<td>varchar(40)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>mos</td>
+<td>varchar(20)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>zone</td>
+<td>varchar(30)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="malaria-commodities">
+<h3>Malaria_commodities<a class="headerlink" href="#malaria-commodities" title="Permalink to this headline">¶</a></h3>
+<p>The malaria commodities table has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>commodity_id</li>
+<li>commodity_name</li>
+<li>alt_name</li>
+<li>unit_of_measure</li>
+<li>commodity_description</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="22%" />
+<col width="9%" />
+<col width="8%" />
+<col width="14%" />
+<col width="11%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>commodity_id</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>commodity_name</td>
+<td>varchar(60)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>alt_name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>unit_of_measure</td>
+<td>varchar(15)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>commodity_description</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="planned-procurement-details">
+<h3>Planned_procurement_details<a class="headerlink" href="#planned-procurement-details" title="Permalink to this headline">¶</a></h3>
+<p>The planned procurement details has the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>planned_procurement_id</li>
+<li>commodity_id</li>
+<li>unit_of_measure</li>
+<li>quantity</li>
+<li>planned_delivery_date</li>
+<li>funding_agency_id</li>
+<li>comment</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="19%" />
+<col width="8%" />
+<col width="7%" />
+<col width="12%" />
+<col width="22%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Field</td>
+<td>Type</td>
+<td>Null</td>
+<td>Key</td>
+<td>Default</td>
+<td>Extra</td>
+</tr>
+<tr class="row-even"><td>planned_procurement_id</td>
+<td>int(11)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+</tr>
+<tr class="row-odd"><td>commodity_id</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>unit_of_measure</td>
+<td>varchar(15)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>quantity</td>
+<td>varchar(25)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>planned_delivery_date</td>
+<td>varchar(15)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>funding_agency_id</td>
+<td>int(25)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>comment</td>
+<td>varchar(100)</td>
+<td>NO</td>
+<td>&nbsp;</td>
+<td>NULL</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="SourceMaps.html" class="btn btn-neutral float-right" title="MOS Maps" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Development_tools.html" class="btn btn-neutral" title="Development tools" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, SCI-ezzy.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

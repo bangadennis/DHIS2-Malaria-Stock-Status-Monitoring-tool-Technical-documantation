@@ -25,10 +25,16 @@ Table of contents
     :maxdepth: 4
 
     Overview
-    Structure
-    Development_tools
     Requirements
+    Frameworks
     Installation
+    Setup
+    Configuration
+    Development_tools
+    DatabaseSchema
+    SourceMaps
+    
+    
     
     
     
