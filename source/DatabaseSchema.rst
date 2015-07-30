@@ -9,8 +9,13 @@ Here is the screenshot of the database schema:
 
     .. figure:: images/DatabaseSchema.png
 
-List of Tables
-----------------
+
+
+		
+
+
+Database tables Tables
+-----------------------
 		#. User_table
 		#. County_level_soh
 		#. Commodity_forecast_data
