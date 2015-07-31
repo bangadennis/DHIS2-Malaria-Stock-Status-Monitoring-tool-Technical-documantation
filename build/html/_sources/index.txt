@@ -13,11 +13,11 @@ This documentation should provide an overview of the entire stock status monitor
 There is a `downloadable PDF version`_ of this documentation, a
 `mobile friendly EPUB version`_ and a `downloadable HTML version`_.
 
-.. _`downloadable PDF version`: https://media.readthedocs.org/pdf/stock-status-monitoring-documentation/latest/stock-status-monitoring-documentation.pdf
+.. _`downloadable PDF version`: https://media.readthedocs.org/pdf/technical-documentation/latest/technical-documentation.pdf
 
-.. _`mobile friendly EPUB version`: http://readthedocs.org/projects/stock-status-monitoring-documentation/downloads/epub/latest/
+.. _`mobile friendly EPUB version`: http://readthedocs.org/projects/technical-documentation/downloads/epub/latest/
 
-.. _`downloadable HTML version`: http://readthedocs.org/projects/stock-status-monitoring-documentation/downloads/htmlzip/latest/
+.. _`downloadable HTML version`: http://readthedocs.org/projects/technical-documentation/downloads/htmlzip/latest/
 
 Table of contents
 ====================

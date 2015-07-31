@@ -8,15 +8,15 @@ Color codes Key
 .. raw:: html
 
             <span > 
-            	<i style="color:red;" class="fa fa-square"></i>Red: <=3</span> <br><br>
+            	<i style="color:red;" class="fa fa-square"></i>Red: <b><=3</b></span> <br><br>
 
             <span >
-            	<i style="color:green;" class="fa fa-square"></i>Green:  >3 to <=6<br></span><br>
+            	<i style="color:green;" class="fa fa-square"></i>Green:  <b>>3 to <=6</b><br></span><br>
 
              <span >
-            	<i  style="color:orange;" class="fa fa-square"></i>Orange:  >6 to <=9</span> <br><br>
+            	<i  style="color:orange;" class="fa fa-square"></i>Orange:  <b>>6 to <=9</b></span> <br><br>
 
-            	<span ><i style="color:yellow;" class="fa fa-square"></i>Yellow:  >9</span><br><br>
+            	<span ><i style="color:yellow;" class="fa fa-square"></i>Yellow:  <b>>9</b></span><br><br>
 
 
 
