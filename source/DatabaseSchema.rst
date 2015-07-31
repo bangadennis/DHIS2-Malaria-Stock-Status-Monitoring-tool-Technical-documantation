@@ -86,7 +86,7 @@ This table consists of the county level SOH attributes. It has the following col
 
 +---------------------+-------------+------+-----+---------+-------+
 | Field               | Type        | Null | Key | Default | Extra |
-+---------------------+-------------+------+-----+---------+-------+
++=====================+=============+======+=====+=========+=======+
 | county              | varchar(20) | NO   |     | NULL    |       |
 +---------------------+-------------+------+-----+---------+-------+
 | report_period       | varchar(20) | NO   |     | NULL    |       |
@@ -117,7 +117,7 @@ This table consists of the commodity forecast attributes. It has the following c
 
 +------------------------------+-------------+------+-----+---------+----------------+
 | Field                        | Type        | Null | Key | Default | Extra          |
-+------------------------------+-------------+------+-----+---------+----------------+
++==============================+=============+======+=====+=========+================+
 | commodity_forecast_data_id   | int(25)     | NO   | PRI | NULL    | auto_increment |
 +------------------------------+-------------+------+-----+---------+----------------+
 | forecast_start_date          | varchar(15) | NO   |     | NULL    |                |
@@ -142,7 +142,7 @@ This table consists of the current stock attributes. It has the following column
 
 +-------------------+--------------+------+-----+---------+----------------+
 | Field             | Type         | Null | Key | Default | Extra          |
-+-------------------+--------------+------+-----+---------+----------------+
++===================+==============+======+=====+=========+================+
 | current_stock_id  | int(25)      | NO   | PRI | NULL    | auto_increment |
 +-------------------+--------------+------+-----+---------+----------------+
 | commodity_id      | varchar(255) | NO   |     | NULL    |                |
@@ -170,7 +170,7 @@ This table consists of pending shipment attributes. It has the following columns
 
 +--------------------------+--------------+------+-----+---------+----------------+
 | Field                    | Type         | Null | Key | Default | Extra          |
-+--------------------------+--------------+------+-----+---------+----------------+
++==========================+==============+======+=====+=========+================+
 | pending_shipment_id      | int(25)      | NO   | PRI | NULL    | auto_increment |
 +--------------------------+--------------+------+-----+---------+----------------+
 | period                   | int(10)      | NO   |     | NULL    |                |
@@ -201,7 +201,7 @@ This table consists of counties attributes. It has the following columns:
 
 +-------------+--------------+------+-----+---------+-------+
 | Field       | Type         | Null | Key | Default | Extra |
-+-------------+--------------+------+-----+---------+-------+
++=============+==============+======+=====+=========+=======+
 | county_id   | varchar(20)  | NO   | PRI | NULL    |       |
 +-------------+--------------+------+-----+---------+-------+
 | county_name | varchar(30)  | NO   |     | NULL    |       |
@@ -225,7 +225,7 @@ This table consists of central level data attributes. It has the following colum
 
 +------------------------+-------------+------+-----+---------+----------------+
 | Field                  | Type        | Null | Key | Default | Extra          |
-+------------------------+-------------+------+-----+---------+----------------+
++========================+=============+======+=====+=========+================+
 | central_level_stock_id | int(25)     | NO   | PRI | NULL    | auto_increment |
 +------------------------+-------------+------+-----+---------+----------------+
 | supply_agency_id       | int(25)     | NO   | MUL | NULL    |                |
@@ -253,7 +253,7 @@ This table consists of facility level data attributes. It has the following colu
 
 +------------------+-------------+------+-----+---------+----------------+
 | Field            | Type        | Null | Key | Default | Extra          |
-+------------------+-------------+------+-----+---------+----------------+
++==================+=============+======+=====+=========+================+
 | central_drugs_id | int(11)     | NO   | PRI | NULL    | auto_increment |
 +------------------+-------------+------+-----+---------+----------------+
 | drug_id          | varchar(20) | NO   |     | NULL    |                |
@@ -268,7 +268,7 @@ This table consists of facility level data attributes. It has the following colu
 +------------------+-------------+------+-----+---------+----------------+
 
 County_level_reporting_rates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This table consists of county level reporting rates attributes. It has the following columns:
 
 		- reporting_rate_id
@@ -279,7 +279,7 @@ This table consists of county level reporting rates attributes. It has the follo
 
 +----------------------+-------------+------+-----+---------+----------------+
 | Field                | Type        | Null | Key | Default | Extra          |
-+----------------------+-------------+------+-----+---------+----------------+
++======================+=============+======+=====+=========+================+
 | reporting_rate_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
 +----------------------+-------------+------+-----+---------+----------------+
 | reporting_rate_value | varchar(10) | NO   |     | NULL    |                |
@@ -303,7 +303,7 @@ The zones table has the following attributes:
 
 +---------+--------------+------+-----+---------+----------------+
 | Field   | Type         | Null | Key | Default | Extra          |
-+---------+--------------+------+-----+---------+----------------+
++=========+==============+======+=====+=========+================+
 | zone    | varchar(30)  | NO   |     | NULL    |                |
 +---------+--------------+------+-----+---------+----------------+
 | comment | varchar(100) | NO   |     | NULL    |                |
@@ -325,7 +325,7 @@ The Supply chain agencies table has the following attributes:
 
 +------------------------+---------------+------+-----+---------+----------------+
 | Field                  | Type          | Null | Key | Default | Extra          |
-+------------------------+---------------+------+-----+---------+----------------+
++========================+===============+======+=====+=========+================+
 | supply_chain_agency_id | int(5)        | NO   | PRI | NULL    | auto_increment |
 +------------------------+---------------+------+-----+---------+----------------+
 | supply_chain_agency    | varchar(60)   | NO   |     | NULL    |                |
@@ -354,7 +354,7 @@ The county level data table has the following attributes:
 
 +------------------+-------------+------+-----+---------+----------------+
 | Field            | Type        | Null | Key | Default | Extra          |
-+------------------+-------------+------+-----+---------+----------------+
++==================+=============+======+=====+=========+================+
 | county_drugs_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
 +------------------+-------------+------+-----+---------+----------------+
 | county_id        | varchar(50) | NO   | MUL | NULL    |                |
@@ -381,7 +381,7 @@ The Mapping drugs category table has the following attributes:
 
 +------------------------+-------------+------+-----+---------+----------------+
 | Field                  | Type        | Null | Key | Default | Extra          |
-+------------------------+-------------+------+-----+---------+----------------+
++========================+=============+======+=====+=========+================+
 | mapping_drugs_category | int(11)     | NO   | PRI | NULL    | auto_increment |
 +------------------------+-------------+------+-----+---------+----------------+
 | mapping_id             | varchar(20) | NO   |     | NULL    |                |
@@ -401,7 +401,7 @@ The Facility level reporting  rates table has the following attributes:
 
 +----------------------+-------------+------+-----+---------+----------------+
 | Field                | Type        | Null | Key | Default | Extra          |
-+----------------------+-------------+------+-----+---------+----------------+
++======================+=============+======+=====+=========+================+
 | reporting_rate_id    | int(11)     | NO   | PRI | NULL    | auto_increment |
 +----------------------+-------------+------+-----+---------+----------------+
 | reporting_rate_value | varchar(10) | NO   |     | NULL    |                |
@@ -422,7 +422,7 @@ The funding agencies table has the following attributes:
 
 +---------------------+--------------+------+-----+---------+----------------+
 | Field               | Type         | Null | Key | Default | Extra          |
-+---------------------+--------------+------+-----+---------+----------------+
++=====================+==============+======+=====+=========+================+
 | funding_agency_id   | int(25)      | NO   | PRI | NULL    | auto_increment |
 +---------------------+--------------+------+-----+---------+----------------+
 | funding_agency_name | varchar(60)  | NO   |     | NULL    |                |
@@ -445,7 +445,7 @@ The facility level SOH table has the following attributes:
 
 +---------------------+-------------+------+-----+---------+-------+
 | Field               | Type        | Null | Key | Default | Extra |
-+---------------------+-------------+------+-----+---------+-------+
++=====================+=============+======+=====+=========+=======+
 | period              | varchar(10) | NO   |     | NULL    |       |
 +---------------------+-------------+------+-----+---------+-------+
 | commodity_name      | varchar(30) | NO   |     | NULL    |       |
@@ -474,7 +474,7 @@ The malaria commodities table has the following attributes:
 
 +-----------------------+--------------+------+-----+---------+-------+
 | Field                 | Type         | Null | Key | Default | Extra |
-+-----------------------+--------------+------+-----+---------+-------+
++=======================+==============+======+=====+=========+=======+
 | commodity_id          | varchar(25)  | NO   | PRI | NULL    |       |
 +-----------------------+--------------+------+-----+---------+-------+
 | commodity_name        | varchar(60)  | NO   |     | NULL    |       |
