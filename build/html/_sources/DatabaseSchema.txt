@@ -53,7 +53,7 @@ This table consists of a list of the system users' attributes with the following
 
 +--------------+--------------+------+-----+---------+----------------+
 | Field        | Type         | Null | Key | Default | Extra          |
-+--------------+--------------+------+-----+---------+----------------+
++==============+==============+======+=====+=========+================+
 | user_id      | int(10)      | NO   | PRI | NULL    | auto_increment |
 +--------------+--------------+------+-----+---------+----------------+
 | password     | varchar(255) | NO   |     | NULL    |                |
@@ -412,7 +412,7 @@ The Facility level reporting  rates table has the following attributes:
 +----------------------+-------------+------+-----+---------+----------------+
 
 Funding_agenciebles
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 The funding agencies table has the following attributes:
   
 
@@ -500,7 +500,7 @@ The planned procurement details has the following attributes:
 
 +------------------------+--------------+------+-----+---------+----------------+
 | Field                  | Type         | Null | Key | Default | Extra          |
-+------------------------+--------------+------+-----+---------+----------------+
++========================+==============+======+=====+=========+================+
 | planned_procurement_id | int(11)      | NO   | PRI | NULL    | auto_increment |
 +------------------------+--------------+------+-----+---------+----------------+
 | commodity_id           | varchar(25)  | NO   |     | NULL    |                |
@@ -515,3 +515,4 @@ The planned procurement details has the following attributes:
 +------------------------+--------------+------+-----+---------+----------------+
 | comment                | varchar(100) | NO   |     | NULL    |                |
 +------------------------+--------------+------+-----+---------+----------------+
+

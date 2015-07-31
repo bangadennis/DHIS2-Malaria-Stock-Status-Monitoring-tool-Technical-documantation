@@ -2,10 +2,26 @@ MOS Maps
 ==========
 MOS maps have been used to represent MOS status both at the county and national level.
 
-red <=3 \|\| 
-green >3 to <=6 \|\| 
-orange >6 to <=9 \|\| 
-yellow >9
+Color codes Key
+----------------
+
+.. raw:: html
+
+            <span > 
+            	<i style="color:red;" class="fa fa-square"></i>Red: <=3</span> <br><br>
+
+            <span >
+            	<i style="color:green;" class="fa fa-square"></i>Green:  >3 to <=6<br></span><br>
+
+             <span >
+            	<i  style="color:orange;" class="fa fa-square"></i>Orange:  >6 to <=9</span> <br><br>
+
+            	<span ><i style="color:yellow;" class="fa fa-square"></i>Yellow:  >9</span><br><br>
+
+
+
+
+
 
 
 County Level MOS Report
