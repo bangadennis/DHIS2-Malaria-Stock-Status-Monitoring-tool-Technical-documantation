@@ -30,7 +30,7 @@ Database
 This is the database logic. It contains scripts for database authentication and connection creation as well as those for inserting, fetching and updating items on the database.
 
 
-The project's landing page is at:  http://msh.urandu.com/ 
+The project's landing page is at:  http://41.89.93.232/stock-monitoring/
 
 
 

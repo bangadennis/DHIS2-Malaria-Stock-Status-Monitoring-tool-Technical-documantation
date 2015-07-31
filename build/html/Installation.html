@@ -32,7 +32,7 @@
   
     <link rel="top" title="StockStatusMonitoring_Technical 1.0 documentation" href="index.html"/>
         <link rel="next" title="Project structure" href="Setup.html"/>
-        <link rel="prev" title="&lt;no title&gt;" href="Frameworks.html"/> 
+        <link rel="prev" title="Frameworks" href="Frameworks.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,6 +83,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Frameworks.html">Frameworks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Frameworks.html#source-code-structure">Source Code Structure</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Deployment of the system</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation-steps">Installation Steps</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step-1">step 1</a></li>
@@ -110,6 +114,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Configuration.html">Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Development_tools.html">Development tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#mysql-database">MYSQL database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
@@ -121,13 +126,43 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="DatabaseSchema.html">The Database Schema</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#list-of-tables">List of Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#database-tables">Database  Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#tables-attributes-and-design">Tables attributes and design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#user-table">User_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-soh">County_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#commodity-forecast-data">Commodity_forecast_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#current-stock">Current_stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#pending-shipment-details">Pending_shipment_details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#central-level-data">Central_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-data">Facility_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-reporting-rates">County_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#zones">Zones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#supply-chain-agencies">Supply_chain_agencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-data">County_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#mapping-drugs-category">Mapping_drugs_category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-reporting-rates">Facility_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#funding-agenciebles">Funding_agenciebles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-soh">Facility_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#malaria-commodities">Malaria_commodities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#planned-procurement-details">Planned_procurement_details</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-mos-report">County Level MOS Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-12s">Artemether-Lumefantrine 20/120 Tabs 12s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-18s">Artemether-Lumefantrine 20/120 Tabs 18s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-24s">Artemether-Lumefantrine 20/120 Tabs 24s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-6s">Artemether-Lumefantrine 20/120 Tabs 6s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#rapid-diagnostic-tests">Rapid Diagnostic Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-months-of-stock-mos-chart">County level months of stock(MOS) chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#national-level-months-of-stock-mos-chart">National Level months of stock(MOS) chart</a></li>
+</ul>
+</li>
 </ul>
 <ul class="simple">
 </ul>
@@ -251,7 +286,7 @@
         <a href="Setup.html" class="btn btn-neutral float-right" title="Project structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Frameworks.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Frameworks.html" class="btn btn-neutral" title="Frameworks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

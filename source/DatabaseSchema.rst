@@ -14,7 +14,7 @@ Here is the screenshot of the database schema:
 		
 
 
-Database tables Tables
+Database  Tables
 -----------------------
 		#. User_table
 		#. County_level_soh

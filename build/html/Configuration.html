@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; StockStatusMonitoring_Technical 1.0 documentation</title>
+  <title>Configurations &mdash; StockStatusMonitoring_Technical 1.0 documentation</title>
   
 
   
@@ -71,7 +71,7 @@
         
           
           
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul class="simple">
 </ul>
 </li>
@@ -81,6 +81,10 @@
 <li class="toctree-l2"><a class="reference internal" href="Requirements.html#client-side-requirements">Client side requirements</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Frameworks.html">Frameworks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Frameworks.html#source-code-structure">Source Code Structure</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Deployment of the system</a><ul>
@@ -110,6 +114,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Development_tools.html">Development tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#mysql-database">MYSQL database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
@@ -121,13 +126,43 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="DatabaseSchema.html">The Database Schema</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#list-of-tables">List of Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#database-tables">Database  Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseSchema.html#tables-attributes-and-design">Tables attributes and design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#user-table">User_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-soh">County_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#commodity-forecast-data">Commodity_forecast_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#current-stock">Current_stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#pending-shipment-details">Pending_shipment_details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#counties">Counties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#central-level-data">Central_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-data">Facility_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-reporting-rates">County_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#zones">Zones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#supply-chain-agencies">Supply_chain_agencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#county-level-data">County_level_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#mapping-drugs-category">Mapping_drugs_category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-reporting-rates">Facility_level_reporting_rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#funding-agenciebles">Funding_agenciebles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#facility-level-soh">Facility_level_soh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#malaria-commodities">Malaria_commodities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DatabaseSchema.html#planned-procurement-details">Planned_procurement_details</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-mos-report">County Level MOS Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-12s">Artemether-Lumefantrine 20/120 Tabs 12s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-18s">Artemether-Lumefantrine 20/120 Tabs 18s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-24s">Artemether-Lumefantrine 20/120 Tabs 24s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-6s">Artemether-Lumefantrine 20/120 Tabs 6s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#rapid-diagnostic-tests">Rapid Diagnostic Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-months-of-stock-mos-chart">County level months of stock(MOS) chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#national-level-months-of-stock-mos-chart">National Level months of stock(MOS) chart</a></li>
+</ul>
+</li>
 </ul>
 <ul class="simple">
 </ul>
@@ -154,7 +189,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>Configurations</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -167,7 +202,19 @@
 </div>
           <div role="main" class="document">
             
-  
+  <div class="section" id="configurations">
+<h1>Configurations<a class="headerlink" href="#configurations" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Upload the System folders and files to the server. Normally the index.php file will be at your root.</li>
+<li>Open the application/config/config.php file with a text editor and set your base URL. If you intend to use encryption or sessions, set your encryption key.</li>
+<li>Open the <em>application/config/database.php</em> file with a text editor and set your database settings.</li>
+<li>If you wish to increase security by hiding the location of your CodeIgniter files you can rename the system and application folders to something more private. If you do rename them, you must open your main index.php file and set the <em>$system_path</em> and <em>$application_folder</em> variables at the top of the file with the new name you’ve chosen.</li>
+<li>For the best security, both the system and any application folders should be placed above web root so that they are not directly accessible via a browser. By default, <strong>.htaccess</strong> files are included in each folder to help prevent direct access, but it is best to remove them from public access entirely in case the web server configuration changes or doesn’t abide by the .htaccess.</li>
+<li>If you would like to keep your views public it is also possible to move the views folder out of your application folder.</li>
+<li>After moving them, open your main index.php file and set the $system_path, $application_folder and $view_folder variables, preferably with a full path, e.g. ‘/www/MyUser/system’.</li>
+</ul>
+</div>
+
 
           </div>
           <footer>
