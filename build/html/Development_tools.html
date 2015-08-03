@@ -88,7 +88,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Deployment of the system</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Installation.html#installation-steps">Installation Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Installation.html#installation-steps-s">Installation Steps s</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Installation.html#step-1">step 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Installation.html#step-2">Step 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Installation.html#step-3">Step 3</a></li>
@@ -116,7 +116,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Configuration.html">Configurations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Development tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mysql-database">MYSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-mysql">Database - MySQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#javascript">JavaScript</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#html5-bootstrap-and-javascript-for-user-interface">HTML5, Bootstrap and JavaScript for user interface</a><ul class="simple">
@@ -151,6 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#color-codes-key">Color codes Key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-mos-report">County Level MOS Report</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-12s">Artemether-Lumefantrine 20/120 Tabs 12s</a></li>
 <li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-18s">Artemether-Lumefantrine 20/120 Tabs 18s</a></li>
@@ -205,19 +206,30 @@
   <div class="section" id="development-tools">
 <h1>Development tools<a class="headerlink" href="#development-tools" title="Permalink to this headline">¶</a></h1>
 <p>Below is a description of the development tools and technologies used to develope the malaria stock status monitoring tool.</p>
-<div class="section" id="mysql-database">
-<h2>MYSQL database<a class="headerlink" href="#mysql-database" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>A MySQL database is used to store data.</li>
-<li>However, another database like PostgreSQL can also be used.</li>
-<li>The choice of the database was purely due to the rapid turn around time.</li>
+<div class="section" id="database-mysql">
+<h2>Database - MySQL<a class="headerlink" href="#database-mysql" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">A MySQL database is used to store data.</p>
+</li>
+<li><p class="first">However, another database like PostgreSQL can also be used.</p>
+</li>
+<li><p class="first">The choice of the database was purely due to:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The rapid turn around time.</li>
+<li>It manages memory very well: MySQL server has been thoroughly tested to prevent memory leaks.</li>
+<li>It runs on many operating systems: MySQL runs on many operating systems, including Novell NetWare, Windows,Linux, many varieties of UNIX* (such as Sun* Solaris*, AIX, and DEC* UNIX), OS/2, FreeBSD*, and others.</li>
+<li>It supports several development interfaces: Development interfaces include JDBC, ODBC, and scripting (PHP and Perl), letting you create database solutions that run not only in your NetWare 6.5 environment, but across all major platforms, including Linux, UNIX, and Windows.</li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </div>
 <div class="section" id="php-and-apache2-for-the-server-side">
 <h2>PHP and Apache2 for the server side<a class="headerlink" href="#php-and-apache2-for-the-server-side" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The scripting language PHP and web server Apache2 were used for the server side logic.</li>
-<li>CodeIgniter PHP framework was used to develop the system.</li>
+<li><strong>CodeIgniter</strong> PHP framework was used to develop the system.</li>
 </ul>
 </div>
 <div class="section" id="javascript">

@@ -1,13 +1,33 @@
 Deployment of the system
 ===========================
 
-These instructions show you how to install the malaria stock status monitoring system on any web server. Check out our operating system specific guides for Linux, Windows Server and Mac OSX.
+These instructions show you how to install the malaria stock status monitoring system on any web server. Please check out  operating systems specific guides for Linux server, Windows Server and Mac OSX.
 
 Installation Steps 
 -------------------
 step 1
 ~~~~~~~~
 - Make sure the webserver has MySQL and PHP support.
+
+.. note::
+
+        e.g in Windows server,
+        Step 1: **Download the installation files**. You will need to download and install the windows version of the installers for each of the below componments:
+
+            #. Apache. Apache is the HTTP (Web) server software.
+            #. PHP. PHP is the general-purpose scripting language, especially suited for Web development, that will be used.
+            #. MySQL Server. MySQL is the database server/software will be used.
+
+        Step2:**Install Apache**. Run the Apache install file. You will need to follow the prompts and respond accordingly. When you reach the window that asks for server information, you may enter the following:
+            #. Network Domain: localhost
+            #. Server Name: localhost
+            #. Administrator Email: (any email address).
+            
+        Step 3: **Install PHP**. Run the PHP installation file which you downloaded in Step 1. 
+
+        Step 4: **Install MySQL**. Run the MySQL installation file which you downloaded in Step 1. 
+                - Select the option for the "Typical" isntallation.
+                - You will then click on "Install". 
 
 
 Step 2

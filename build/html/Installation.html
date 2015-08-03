@@ -116,7 +116,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Configuration.html">Configurations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Development_tools.html">Development tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#mysql-database">MYSQL database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Development_tools.html#database-mysql">Database - MySQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#php-and-apache2-for-the-server-side">PHP and Apache2 for the server side</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#javascript">JavaScript</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Development_tools.html#html5-bootstrap-and-javascript-for-user-interface">HTML5, Bootstrap and JavaScript for user interface</a><ul class="simple">
@@ -151,6 +151,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="SourceMaps.html">MOS Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#color-codes-key">Color codes Key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SourceMaps.html#county-level-mos-report">County Level MOS Report</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-12s">Artemether-Lumefantrine 20/120 Tabs 12s</a></li>
 <li class="toctree-l3"><a class="reference internal" href="SourceMaps.html#artemether-lumefantrine-20-120-tabs-18s">Artemether-Lumefantrine 20/120 Tabs 18s</a></li>
@@ -204,7 +205,7 @@
             
   <div class="section" id="deployment-of-the-system">
 <h1>Deployment of the system<a class="headerlink" href="#deployment-of-the-system" title="Permalink to this headline">¶</a></h1>
-<p>These instructions show you how to install the malaria stock status monitoring system on any web server. Check out our operating system specific guides for Linux, Windows Server and Mac OSX.</p>
+<p>These instructions show you how to install the malaria stock status monitoring system on any web server. Please check out  operating systems specific guides for Linux server, Windows Server and Mac OSX.</p>
 <div class="section" id="installation-steps">
 <h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="step-1">
@@ -212,6 +213,36 @@
 <ul class="simple">
 <li>Make sure the webserver has MySQL and PHP support.</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>e.g in Windows server,
+Step 1: <strong>Download the installation files</strong>. You will need to download and install the windows version of the installers for each of the below componments:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Apache. Apache is the HTTP (Web) server software.</li>
+<li>PHP. PHP is the general-purpose scripting language, especially suited for Web development, that will be used.</li>
+<li>MySQL Server. MySQL is the database server/software will be used.</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt>Step2:<strong>Install Apache</strong>. Run the Apache install file. You will need to follow the prompts and respond accordingly. When you reach the window that asks for server information, you may enter the following:</dt>
+<dd><ol class="first last arabic simple">
+<li>Network Domain: localhost</li>
+<li>Server Name: localhost</li>
+<li>Administrator Email: (any email address).</li>
+</ol>
+</dd>
+</dl>
+<p>Step 3: <strong>Install PHP</strong>. Run the PHP installation file which you downloaded in Step 1.</p>
+<dl class="last docutils">
+<dt>Step 4: <strong>Install MySQL</strong>. Run the MySQL installation file which you downloaded in Step 1.</dt>
+<dd><ul class="first last simple">
+<li>Select the option for the &#8220;Typical&#8221; isntallation.</li>
+<li>You will then click on &#8220;Install&#8221;.</li>
+</ul>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="step-2">
 <h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h3>
