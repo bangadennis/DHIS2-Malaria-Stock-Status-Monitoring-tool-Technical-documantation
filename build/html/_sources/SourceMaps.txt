@@ -81,5 +81,5 @@ National level months of Stock (MOS) charts are produced as per the selected per
 
 	.. figure:: images/nationalLevelMOSChart.png
 	
-nationalLevelMOSChart
+
 
