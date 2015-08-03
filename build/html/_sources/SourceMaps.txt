@@ -67,10 +67,19 @@ Here is the screenshot of Rapid Diagnostic Tests MOS report:
 
 County level months of stock(MOS) chart
 -----------------------------------------
-Charts of county level MOS are produced here as per the selected period
+Individual county level months of stock(MOS) Charts are produced here as per the selected period
+
+	.. figure:: images/CountyLevelMOSchart.png
+
+
 
 
 
 National Level months of stock(MOS) chart
 --------------------------------------------
-Charts of level MOS are produced here.
+National level months of Stock (MOS) charts are produced as per the selected period from the drop-down menu.
+
+	.. figure:: images/nationalLevelMOSChart.png
+	
+nationalLevelMOSChart
+
