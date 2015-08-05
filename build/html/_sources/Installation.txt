@@ -12,17 +12,18 @@ step 1
 .. note::
 
         e.g in Windows server,
+
         Step 1: **Download the installation files**. You will need to download and install the windows version of the installers for each of the below componments:
 
             #. Apache. Apache is the HTTP (Web) server software.
             #. PHP. PHP is the general-purpose scripting language, especially suited for Web development, that will be used.
             #. MySQL Server. MySQL is the database server/software will be used.
 
-        Step2:**Install Apache**. Run the Apache install file. You will need to follow the prompts and respond accordingly. When you reach the window that asks for server information, you may enter the following:
+        Step2: **Install Apache**. Run the Apache install file. You will need to follow the prompts and respond accordingly. When you reach the window that asks for server information, you may enter the following:
             #. Network Domain: localhost
             #. Server Name: localhost
             #. Administrator Email: (any email address).
-            
+
         Step 3: **Install PHP**. Run the PHP installation file which you downloaded in Step 1. 
 
         Step 4: **Install MySQL**. Run the MySQL installation file which you downloaded in Step 1. 
@@ -90,3 +91,4 @@ Installing  WAMP
 
 .. toctree::
     :maxdepth: 2
+
